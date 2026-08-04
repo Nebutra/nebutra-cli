@@ -1,0 +1,61 @@
+{
+  "name": "nebutra",
+  "version": "0.4.3",
+  "description": "Governance-first CLI for Nebutra Sailor topology scaffolding, registry-backed feature installs, and platform operations.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "nebutra": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepare": "mkdir -p dist && test -f dist/index.js || echo '#!/usr/bin/env node' > dist/index.js",
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "start": "node dist/index.js",
+    "test": "pnpm build && vitest run",
+    "test:watch": "vitest"
+  },
+  "author": "Nebutra <contact@nebutra.com> (https://nebutra.com)",
+  "license": "MIT",
+  "homepage": "https://github.com/Nebutra/nebutra-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nebutra/nebutra-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nebutra/nebutra-cli/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "commander": "^12.1.0",
+    "node-fetch": "^3.3.2",
+    "p-timeout": "^6.1.4",
+    "picocolors": "^1.1.0"
+  },
+  "devDependencies": {
+    "@nebutra/brand": "^0.1.2",
+    "@nebutra/preset": "file:./vendor/nebutra__preset",
+    "@nebutra/theme": "^0.2.2",
+    "@nebutra/ui": "^0.2.3",
+    "@types/node": "^25.9.1",
+    "@types/node-fetch": "^2.6.13",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.4"
+  },
+  "nebutraMirror": {
+    "sourceRepository": "Nebutra/Nebutra-Sailor",
+    "sourceDirectory": "packages/ops/cli",
+    "sourcePackage": "nebutra",
+    "sourceSha": "ece4ee02c8f33e509f4b7e7cedd9e6f45dd178f4",
+    "canonicalSource": "monorepo"
+  },
+  "packageManager": "pnpm@10.32.1"
+}

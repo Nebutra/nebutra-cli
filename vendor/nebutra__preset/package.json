@@ -1,0 +1,20 @@
+{
+  "name": "@nebutra/preset",
+  "version": "0.1.2",
+  "description": "Scenario preset system — defines which apps, features, and themes each scenario enables",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./deploy-target": "./src/deploy-target.ts",
+    "./nebutra-package-versions": "./src/nebutra-package-versions.ts"
+  },
+  "files": [
+    "src/index.ts",
+    "src/deploy-target.ts",
+    "src/nebutra-package-versions.ts"
+  ],
+  "dependencies": {},
+  "private": false
+}
